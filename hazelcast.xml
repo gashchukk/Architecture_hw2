@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast xmlns="http://www.hazelcast.com/schema/config"
+           xsi:schemaLocation="http://www.hazelcast.com/schema/config
+                               http://www.hazelcast.com/schema/config/hazelcast-config-5.3.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cluster-name>Hello-World</cluster-name>
+
+    <network>
+        <port auto-increment="true">5701</port>
+        <join>
+            <multicast enabled="true"/>
+        </join>
+    </network>
+
+    <queue name="my-bounded-queue">
+        <max-size>10</max-size>
+    </queue>
+
+</hazelcast>
